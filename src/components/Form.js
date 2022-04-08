@@ -5,7 +5,10 @@ export const Form = ({handleSubmit, onHandleChange,name}) => {
 
     <form onSubmit={handleSubmit} name={name} className=" frcc m-3">
         <div>
-          <label htmlFor="title">Search by {name}</label>
+          <label htmlFor="title">
+          {name==="ingredient" && "Search by ingredient"}
+          {name==="name" && "Write your name"}
+          </label>
           <input
             onChange={onHandleChange} 
             name={name}
